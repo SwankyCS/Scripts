@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#copy and paste ip ranges with the CIDR straight into the `iprange` variable
+iprange=(<define IP ranges here>)
+
+#for loop to ping each IP defined under the variable
+for ip in ${iprange[@]}
+do
+        fping -g $ip
+done
