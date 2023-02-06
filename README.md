@@ -1,4 +1,4 @@
-# beginner-network-mapping
+# Network Mapping: beginner
 
 Created as a core location to: <br />
 - Store and update anything relating to the Cybersecurity Network Domain <br />
