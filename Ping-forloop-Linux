@@ -1,0 +1,25 @@
+#Purpose of this script: easily ping multiple IP Addresses by simply: 
+        #copying the entire IP Range (including CIDR post-fix if applicable) and pasting into the script, or;
+        #if the IP Addresses are already in a text file, link the absolute file path in option 2 below
+
+#!/bin/bash
+
+#OPTION 1:
+#copy and paste ip ranges with the CIDR straight into the `iprange` variable
+iprange=(<define IP ranges here>)
+
+#for loop to ping each IP defined under the variable
+for ip in ${iprange[@]}
+do
+        fping -g $ip
+done
+
+OPTION 2:
+#alternatively, you can use the contents of a file to define the iprange variable
+#for example, iprange=$(cat <absolute file path>/<file name>)
+
+#for loop to ping each IP defined under the variable
+for ip in ${iprange[@]}
+do
+        fping -g $ip
+done
